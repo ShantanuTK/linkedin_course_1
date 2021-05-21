@@ -31,25 +31,16 @@ def is_legal_pos(maze, pos):
 def get_path(predecessor, start, goal):
     path = []
     currentPoint = goal
-    path.append(currentPoint)
+    # path.append(currentPoint)
 
     while currentPoint != start:
-        path.append(predecessor[currentPoint])
+        path.append(currentPoint)
         currentPoint = predecessor[currentPoint]
     
     path.append(start)
     path.reverse()
 
     return path
-
-
-
-
-
-
-
-
-
 
 if __name__ == '__main__':
     maze = read_maze('mazes/challenge_maze.txt')

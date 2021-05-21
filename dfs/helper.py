@@ -4,7 +4,7 @@ offset = {
     "up": (-1, 0),
     "right": (0, 1),
     "down": (1, 0),
-    "left": (-1, 0)
+    "left": (0, -1)
 }
 
 def read_maze(path):
@@ -33,10 +33,10 @@ def is_legal_pos(maze, pos):
 def get_path(predecessor, start, goal):
     current_pos = goal
     path = []
-    path.append(goal)
+    # path.append(goal)
 
     while current_pos != start:
-        path.append(predecessor[current_pos])
+        path.append(current_pos)
         current_pos = predecessor[current_pos]
     path.append(start)
     path.reverse()

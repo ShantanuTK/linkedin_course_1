@@ -25,21 +25,23 @@ def dfs(maze, start, goal):
 
 if __name__ == "__main__":
     # Test 1
-    # maze = [[0] * 3 for row in range(3)]
-    # startPos = (0, 0)
-    # goalPos = (2, 2)
-    # result = dfs(maze, startPos, goalPos)
-    # assert result == [(0, 0), (1, 0), (2, 0), (2, 1), (2, 2)]
-
-    # Test 2
-    maze = read_maze("mazes/mini_maze_dfs.txt")
-    for row in maze:
-        print(row)
+    maze = [[0] * 3 for row in range(3)]
     startPos = (0, 0)
     goalPos = (2, 2)
     result = dfs(maze, startPos, goalPos)
-    print(result)
-    # assert result == [(0, 0), (0, 1), (1, 1), (2, 1), (2, 2)]
+    # print(result)
+    assert result == [(0, 0), (1, 0), (2, 0), (2, 1), (2, 2)]
+    print("Done with test 1")
+
+    # Test 2
+    maze = read_maze("mazes/mini_maze_dfs.txt")
+    # for row in maze:
+    #     print(row)
+    startPos = (0, 0)
+    goalPos = (2, 2)
+    result = dfs(maze, startPos, goalPos)
+    # print(result)
+    assert result == [(0, 0), (0, 1), (1, 1), (2, 1), (2, 2)]
     print("Done with test 2")
 
 
